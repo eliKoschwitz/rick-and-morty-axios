@@ -1,14 +1,22 @@
 import {MinifiedChar} from "./App";
 import React from "react";
 import CharacterCard from "./CharacterCard";
+/*
+function giveNames(obj:{names:MinifiedChar[]}): React.ReactNode[]{
+    return obj.names.map(name => (<CharacterCard name1 = {name.name} /> ))
+}
 
-function CharacterGallery(obj : {names : MinifiedChar[]}){
+<div>
+    {giveNames(obj)}
+</div>
+*/
 
-    //const name = obj.names.map(name => name.name);
+
+function CharacterGallery(obj : {charList : MinifiedChar[]}){
 
     return(
         <div>
-            {obj.names.map(name => (<CharacterCard name1 = {name.name} /> ))}
+            {obj.charList.map(char => {return(<CharacterCard key={char.id} name = {char.name} id = {char.id} /> )})}
         </div>
     )
 }

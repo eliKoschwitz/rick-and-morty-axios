@@ -6,7 +6,8 @@ import CharacterGallery from "./CharacterGallery";
 
 export type MinifiedChar ={
   name:string;
-}
+  id:number;
+};
 
 function App() {
   const[characters, setCharacters] = useState<MinifiedChar[]>([]);
@@ -20,8 +21,7 @@ function App() {
 
   return (
     <div>
-      <CharacterGallery names = {characters} />
-
+      <CharacterGallery charList = {characters} />
     </div>
   );
 }

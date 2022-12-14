@@ -1,9 +1,9 @@
 
-function CharacterCard (obj: {name1: string}) {
+function CharacterCard (obj: {name: string, id : number}) {
 
     return(
         <div>
-            {obj.name1}
+            <li key={obj.id}>{obj.name}</li>
         </div>
     )
 }
